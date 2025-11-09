@@ -40,7 +40,7 @@ export function Navigation(props: NavigationProps) {
   }, []);
 
   const handleClick = (path: To) => {
-    window.scrollTo(0, 0);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
     navigate(path);
   };
 
@@ -137,9 +137,9 @@ export function Navigation(props: NavigationProps) {
           <div className="px-7 py-5 relative z-[60] flex flex-1 items-center justify-between">
             <div className="flex items-center space-x-1.5 ssm:space-x-3 pointer-events-auto">
               <Link
-                className="block tabbable rounded-full text-xs ssm:text-base"
+                className="block tabbable rounded-full text-xs ssm:text-base transition-transform duration-200 hover:scale-105"
                 to="/"
-                onClick={() => window.scrollTo(0, 0)}
+                onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
               >
                 <BrandPill clickable header />
               </Link>
@@ -147,7 +147,7 @@ export function Navigation(props: NavigationProps) {
                 href={conf().DISCORD_LINK}
                 target="_blank"
                 rel="noreferrer"
-                className="text-xl text-white tabbable rounded-full backdrop-blur-lg"
+                className="text-xl text-white tabbable rounded-full backdrop-blur-lg transition-transform duration-200 hover:scale-110"
               >
                 <IconPatch
                   icon={Icons.DISCORD}
@@ -161,7 +161,7 @@ export function Navigation(props: NavigationProps) {
                   <a
                     onClick={() => handleClick("/discover")}
                     rel="noreferrer"
-                    className="text-xl text-white tabbable rounded-full backdrop-blur-lg"
+                    className="text-xl text-white tabbable rounded-full backdrop-blur-lg transition-transform duration-200 hover:scale-110 cursor-pointer"
                   >
                     <IconPatch
                       icon={Icons.RISING_STAR}
@@ -174,7 +174,7 @@ export function Navigation(props: NavigationProps) {
                   <a
                     onClick={() => handleClick("/")}
                     rel="noreferrer"
-                    className="text-lg text-white tabbable rounded-full backdrop-blur-lg"
+                    className="text-lg text-white tabbable rounded-full backdrop-blur-lg transition-transform duration-200 hover:scale-110 cursor-pointer"
                   >
                     <IconPatch
                       icon={Icons.SEARCH}
@@ -187,7 +187,7 @@ export function Navigation(props: NavigationProps) {
               <a
                 onClick={() => openNotifications()}
                 rel="noreferrer"
-                className="text-xl text-white tabbable rounded-full backdrop-blur-lg relative"
+                className="text-xl text-white tabbable rounded-full backdrop-blur-lg relative transition-transform duration-200 hover:scale-110 cursor-pointer"
               >
                 <IconPatch icon={Icons.BELL} clickable downsized navigation />
                 {(() => {

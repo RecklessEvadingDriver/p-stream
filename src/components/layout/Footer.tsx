@@ -34,7 +34,7 @@ function FooterLink(props: FooterLinkProps) {
       href={props.href}
       target={props.href ? "_blank" : undefined}
       rel="noreferrer"
-      className="tabbable rounded py-2 px-3 inline-flex cursor-pointer items-center space-x-3 transition-colors duration-200 hover:text-type-emphasis"
+      className="tabbable rounded py-2 px-3 inline-flex cursor-pointer items-center space-x-3 transition-all duration-200 hover:text-type-emphasis hover:bg-white/5 hover:scale-105"
       onClick={props.to ? navigateTo : undefined}
     >
       <Icon icon={props.icon} className="text-2xl" />
@@ -60,7 +60,7 @@ export function Footer() {
   const { t } = useTranslation();
 
   return (
-    <footer className="mt-16 border-t border-type-divider py-16 md:py-8">
+    <footer className="mt-16 border-t border-type-divider py-16 md:py-8 backdrop-blur-sm">
       <WideContainer ultraWide classNames="grid md:grid-cols-2 gap-16 md:gap-8">
         <div>
           <div className="inline-block">
