@@ -157,8 +157,8 @@ function MediaCardContent({
 
   return (
     <Flare.Base
-      className={`group -m-[0.705em] rounded-xl bg-background-main transition-colors duration-300 focus:relative focus:z-10 ${
-        canLink ? "hover:bg-mediaCard-hoverBackground tabbable" : ""
+      className={`group -m-[0.705em] rounded-xl bg-background-main transition-all duration-300 focus:relative focus:z-10 ${
+        canLink ? "hover:bg-mediaCard-hoverBackground hover:shadow-card-hover tabbable" : ""
       } ${closable ? "jiggle" : ""}`}
       tabIndex={canLink ? 0 : -1}
       onKeyUp={(e) => e.key === "Enter" && e.currentTarget.click()}
@@ -172,15 +172,15 @@ function MediaCardContent({
         })}
       />
       <Flare.Child
-        className={`pointer-events-auto relative mb-2 p-[0.4em] transition-transform duration-300 ${
-          canLink ? "group-hover:scale-95" : "opacity-60"
+        className={`pointer-events-auto relative mb-2 p-[0.4em] transition-all duration-300 ${
+          canLink ? "group-hover:scale-[0.97] group-hover:-translate-y-1" : "opacity-60"
         }`}
       >
         <div
           className={classNames(
-            "relative mb-4 pb-[150%] w-full overflow-hidden rounded-xl bg-mediaCard-hoverBackground bg-cover bg-center transition-[border-radius] duration-300",
+            "relative mb-4 pb-[150%] w-full overflow-hidden rounded-xl bg-mediaCard-hoverBackground bg-cover bg-center transition-all duration-300 shadow-card",
             {
-              "group-hover:rounded-lg": canLink,
+              "group-hover:rounded-lg group-hover:shadow-glow-md": canLink,
             },
           )}
           style={{
