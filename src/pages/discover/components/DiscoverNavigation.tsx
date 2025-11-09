@@ -19,10 +19,10 @@ export function DiscoverNavigation({
             <button
               key={category}
               type="button"
-              className={`text-xl md:text-2xl font-bold p-2 bg-transparent text-center rounded-full cursor-pointer flex items-center transition-transform duration-200 ${
+              className={`text-xl md:text-2xl font-bold px-4 py-2 bg-transparent text-center rounded-full cursor-pointer flex items-center transition-all duration-300 ${
                 selectedCategory === category
-                  ? "transform scale-105 text-type-link"
-                  : "text-type-secondary"
+                  ? "transform scale-105 text-type-link shadow-glow-sm"
+                  : "text-type-secondary hover:text-type-dimmed hover:scale-102"
               }`}
               onClick={() => onCategoryChange(category)}
             >
