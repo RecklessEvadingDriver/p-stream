@@ -40,7 +40,7 @@ export function Navigation(props: NavigationProps) {
   }, []);
 
   const handleClick = (path: To) => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    window.scrollTo({ top: 0, behavior: "smooth" });
     navigate(path);
   };
 
@@ -139,7 +139,7 @@ export function Navigation(props: NavigationProps) {
               <Link
                 className="block tabbable rounded-full text-xs ssm:text-base transition-transform duration-200 hover:scale-105"
                 to="/"
-                onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+                onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
               >
                 <BrandPill clickable header />
               </Link>

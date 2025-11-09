@@ -158,7 +158,9 @@ function MediaCardContent({
   return (
     <Flare.Base
       className={`group -m-[0.705em] rounded-xl bg-background-main transition-all duration-300 ease-out focus:relative focus:z-10 ${
-        canLink ? "hover:bg-mediaCard-hoverBackground hover:shadow-xl tabbable" : ""
+        canLink
+          ? "hover:bg-mediaCard-hoverBackground hover:shadow-xl tabbable"
+          : ""
       } ${closable ? "jiggle" : ""}`}
       tabIndex={canLink ? 0 : -1}
       onKeyUp={(e) => e.key === "Enter" && e.currentTarget.click()}
