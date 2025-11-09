@@ -43,53 +43,53 @@ const tokens = {
     },
   },
   blue: {
-    c50: "#ccccd6",
-    c100: "#a2a2a2",
-    c200: "#868686",
-    c300: "#646464",
-    c400: "#4e4e4e",
-    c500: "#383838",
-    c600: "#2e2e2e",
-    c700: "#272727",
-    c800: "#181818",
-    c900: "#0f0f0f"
+    c50: "#E3E8FF",
+    c100: "#C7D2FE",
+    c200: "#A5B4FC",
+    c300: "#818CF8",
+    c400: "#6366F1",
+    c500: "#4F46E5",
+    c600: "#4338CA",
+    c700: "#3730A3",
+    c800: "#312E81",
+    c900: "#1E1B4B"
   },
   purple: {
-    c50: "#aaafff",
-    c100: "#8288fe",
-    c200: "#5a62eb",
-    c300: "#454cd4",
-    c400: "#333abe",
-    c500: "#292d86",
-    c600: "#1f2363",
-    c700: "#191b4a",
-    c800: "#111334", // Lightbar
-    c900: "#0b0d22"
+    c50: "#F3E8FF",
+    c100: "#E9D5FF",
+    c200: "#D8B4FE",
+    c300: "#C084FC",
+    c400: "#A855F7",
+    c500: "#9333EA",
+    c600: "#7C3AED",
+    c700: "#6D28D9",
+    c800: "#5B21B6",
+    c900: "#4C1D95"
   },
   ash: {
-    c50: "#8d8d8d",
-    c100: "#6b6b6b",
-    c200: "#545454",
-    c300: "#3c3c3c",
-    c400: "#313131",
-    c500: "#2c2c2c",
-    c600: "#252525",
-    c700: "#1e1e1e",
-    c800: "#181818",
-    c900: "#111111"
+    c50: "#F9FAFB",
+    c100: "#F3F4F6",
+    c200: "#E5E7EB",
+    c300: "#D1D5DB",
+    c400: "#9CA3AF",
+    c500: "#6B7280",
+    c600: "#4B5563",
+    c700: "#374151",
+    c800: "#1F2937",
+    c900: "#111827"
   },
   shade: {
-    c25: "#939393", // Media card hover accent
-    c50: "#7c7c7c",
-    c100: "#666666",
-    c200: "#4f4f4f",
-    c300: "#404040",
-    c400: "#343434",
-    c500: "#282828",
-    c600: "#202020",
-    c700: "#1a1a1a",
-    c800: "#151515",
-    c900: "#0e0e0e"
+    c25: "#F8FAFC",
+    c50: "#F1F5F9",
+    c100: "#E2E8F0",
+    c200: "#CBD5E1",
+    c300: "#94A3B8",
+    c400: "#64748B",
+    c500: "#475569",
+    c600: "#334155",
+    c700: "#1E293B",
+    c800: "#0F172A",
+    c900: "#020617"
   },
 };
 
@@ -106,38 +106,38 @@ export const defaultTheme = {
       pill: {
         background: tokens.black.c100,
         backgroundHover: tokens.black.c125,
-        highlight: tokens.blue.c200,
-        activeBackground: tokens.shade.c700,
+        highlight: tokens.purple.c400,
+        activeBackground: tokens.purple.c700,
       },
 
       // meta data for the theme itself
       global: {
-        accentA: tokens.blue.c200,
-        accentB: tokens.blue.c300,
+        accentA: tokens.purple.c500,
+        accentB: tokens.blue.c500,
       },
 
       // light bar
       lightBar: {
-        light: tokens.purple.c800,
+        light: tokens.purple.c600,
       },
 
       // Buttons
       buttons: {
-        toggle: tokens.purple.c300,
+        toggle: tokens.purple.c500,
         toggleDisabled: tokens.black.c200,
         danger: tokens.semantic.rose.c300,
         dangerHover: tokens.semantic.rose.c200,
 
-        secondary: tokens.black.c100,
-        secondaryText: tokens.semantic.silver.c300,
-        secondaryHover: tokens.black.c150,
-        primary: tokens.white,
-        primaryText: tokens.black.c50,
-        primaryHover: tokens.semantic.silver.c100,
+        secondary: tokens.shade.c700,
+        secondaryText: tokens.shade.c100,
+        secondaryHover: tokens.shade.c600,
+        primary: tokens.purple.c500,
+        primaryText: tokens.white,
+        primaryHover: tokens.purple.c600,
         purple: tokens.purple.c600,
-        purpleHover: tokens.purple.c400,
-        cancel: tokens.black.c100,
-        cancelHover: tokens.black.c150
+        purpleHover: tokens.purple.c500,
+        cancel: tokens.shade.c700,
+        cancelHover: tokens.shade.c600
       },
 
       // only used for body colors/textures
@@ -156,190 +156,190 @@ export const defaultTheme = {
 
       // typography
       type: {
-        logo: tokens.purple.c100,
+        logo: tokens.purple.c400,
         emphasis: tokens.white,
-        text: tokens.shade.c50,
-        dimmed: tokens.shade.c50,
-        divider: tokens.ash.c500,
-        secondary: tokens.ash.c100,
+        text: tokens.shade.c100,
+        dimmed: tokens.shade.c300,
+        divider: tokens.shade.c700,
+        secondary: tokens.shade.c400,
         danger: tokens.semantic.red.c100,
         success: tokens.semantic.green.c100,
-        link: tokens.purple.c100,
-        linkHover: tokens.purple.c50
+        link: tokens.purple.c400,
+        linkHover: tokens.purple.c300
       },
 
       // search bar
       search: {
-        background: tokens.black.c100,
-        hoverBackground: tokens.shade.c900,
-        focused: tokens.black.c125,
-        placeholder: tokens.shade.c200,
-        icon: tokens.shade.c500,
+        background: tokens.shade.c800,
+        hoverBackground: tokens.shade.c700,
+        focused: tokens.shade.c700,
+        placeholder: tokens.shade.c400,
+        icon: tokens.shade.c400,
         text: tokens.white,
       },
 
       // media cards
       mediaCard: {
-        hoverBackground: tokens.shade.c900,
-        hoverAccent: tokens.black.c250,
-        hoverShadow: tokens.black.c50,
-        shadow: tokens.shade.c800,
-        barColor: tokens.ash.c200,
-        barFillColor: tokens.purple.c100,
+        hoverBackground: tokens.shade.c800,
+        hoverAccent: tokens.purple.c500,
+        hoverShadow: tokens.purple.c900,
+        shadow: tokens.black.c100,
+        barColor: tokens.shade.c600,
+        barFillColor: tokens.purple.c500,
         badge: tokens.shade.c700,
-        badgeText: tokens.ash.c100
+        badgeText: tokens.shade.c200
       },
 
       // Large card
       largeCard: {
-        background: tokens.black.c100,
-        icon: tokens.purple.c400,
+        background: tokens.shade.c800,
+        icon: tokens.purple.c500,
       },
 
       // Dropdown
       dropdown: {
-        background: tokens.black.c100,
-        altBackground: tokens.black.c80,
-        hoverBackground: tokens.black.c150,
-        highlight: tokens.semantic.yellow.c400,
-        highlightHover: tokens.semantic.yellow.c200,
-        text: tokens.shade.c50,
-        secondary: tokens.shade.c100,
-        border: tokens.shade.c400,
-        contentBackground: tokens.black.c50
+        background: tokens.shade.c800,
+        altBackground: tokens.shade.c900,
+        hoverBackground: tokens.shade.c700,
+        highlight: tokens.purple.c500,
+        highlightHover: tokens.purple.c400,
+        text: tokens.shade.c100,
+        secondary: tokens.shade.c300,
+        border: tokens.shade.c700,
+        contentBackground: tokens.shade.c900
       },
 
       // Passphrase
       authentication: {
-        border: tokens.shade.c300,
-        inputBg: tokens.black.c100,
-        inputBgHover: tokens.black.c150,
-        wordBackground: tokens.shade.c500,
-        copyText: tokens.shade.c100,
-        copyTextHover: tokens.ash.c50,
+        border: tokens.shade.c600,
+        inputBg: tokens.shade.c800,
+        inputBgHover: tokens.shade.c700,
+        wordBackground: tokens.shade.c700,
+        copyText: tokens.shade.c200,
+        copyTextHover: tokens.shade.c100,
         errorText: tokens.semantic.rose.c100,
       },
 
       // Settings page
       settings: {
         sidebar: {
-          activeLink: tokens.black.c100,
-          badge: tokens.shade.c900,
+          activeLink: tokens.shade.c800,
+          badge: tokens.shade.c700,
 
           type: {
-            secondary: tokens.shade.c200,
-            inactive: tokens.shade.c50,
-            icon: tokens.black.c200,
-            iconActivated: tokens.purple.c200,
-            activated: tokens.purple.c100
+            secondary: tokens.shade.c400,
+            inactive: tokens.shade.c400,
+            icon: tokens.shade.c500,
+            iconActivated: tokens.purple.c500,
+            activated: tokens.purple.c400
           },
         },
 
         card: {
           border: tokens.shade.c700,
-          background: tokens.black.c100,
-          altBackground: tokens.black.c100
+          background: tokens.shade.c800,
+          altBackground: tokens.shade.c800
         },
 
         saveBar: {
-          background: tokens.black.c50
+          background: tokens.shade.c900
         },
       },
 
       // Utilities
       utils: {
-        divider: tokens.ash.c300
+        divider: tokens.shade.c700
       },
 
       // Onboarding
       onboarding: {
-        bar: tokens.shade.c400,
-        barFilled: tokens.purple.c300,
-        divider: tokens.shade.c200,
+        bar: tokens.shade.c700,
+        barFilled: tokens.purple.c500,
+        divider: tokens.shade.c600,
         card: tokens.shade.c800,
         cardHover: tokens.shade.c700,
-        border: tokens.shade.c600,
-        good: tokens.purple.c100,
-        best: tokens.semantic.yellow.c100,
-        link: tokens.purple.c100,
+        border: tokens.shade.c700,
+        good: tokens.purple.c400,
+        best: tokens.purple.c500,
+        link: tokens.purple.c400,
       },
 
       // Error page
       errors: {
-        card: tokens.black.c75,
-        border: tokens.ash.c500,
+        card: tokens.shade.c900,
+        border: tokens.shade.c700,
 
         type: {
-          secondary: tokens.ash.c100,
+          secondary: tokens.shade.c300,
         },
       },
 
       // About page
       about: {
-        circle: tokens.black.c100,
-        circleText: tokens.ash.c50
+        circle: tokens.shade.c800,
+        circleText: tokens.shade.c200
       },
 
       // About page
       editBadge: {
-        bg: tokens.ash.c500,
-        bgHover: tokens.ash.c400,
-        text: tokens.ash.c50
+        bg: tokens.shade.c700,
+        bgHover: tokens.shade.c600,
+        text: tokens.shade.c100
       },
 
       progress: {
-        background: tokens.ash.c50,
-        preloaded: tokens.ash.c50,
-        filled: tokens.purple.c200,
+        background: tokens.shade.c700,
+        preloaded: tokens.shade.c600,
+        filled: tokens.purple.c500,
       },
 
       // video player
       video: {
-        buttonBackground: tokens.ash.c600,
+        buttonBackground: tokens.shade.c700,
 
         autoPlay: {
-          background: tokens.ash.c800,
-          hover: tokens.ash.c600,
+          background: tokens.shade.c800,
+          hover: tokens.shade.c700,
         },
 
         scraping: {
-          card: tokens.black.c50,
+          card: tokens.shade.c900,
           error: tokens.semantic.red.c200,
           success: tokens.semantic.green.c200,
-          loading: tokens.purple.c200,
-          noresult: tokens.black.c200
+          loading: tokens.purple.c500,
+          noresult: tokens.shade.c700
         },
 
         audio: {
-          set: tokens.purple.c200,
+          set: tokens.purple.c500,
         },
 
         context: {
-          background: tokens.black.c50,
-          light: tokens.shade.c50,
-          border: tokens.ash.c600,
-          hoverColor: tokens.ash.c600,
-          buttonFocus: tokens.ash.c500,
-          flagBg: tokens.ash.c500,
-          inputBg: tokens.black.c100,
-          buttonOverInputHover: tokens.ash.c500,
-          inputPlaceholder: tokens.ash.c200,
-          cardBorder: tokens.ash.c700,
-          slider: tokens.black.c200,
-          sliderFilled: tokens.purple.c200,
+          background: tokens.shade.c900,
+          light: tokens.shade.c100,
+          border: tokens.shade.c700,
+          hoverColor: tokens.shade.c700,
+          buttonFocus: tokens.shade.c600,
+          flagBg: tokens.shade.c700,
+          inputBg: tokens.shade.c800,
+          buttonOverInputHover: tokens.shade.c600,
+          inputPlaceholder: tokens.shade.c400,
+          cardBorder: tokens.shade.c700,
+          slider: tokens.shade.c700,
+          sliderFilled: tokens.purple.c500,
           error: tokens.semantic.red.c200,
 
           buttons: {
-            list: tokens.ash.c700,
-            active: tokens.ash.c900,
+            list: tokens.shade.c700,
+            active: tokens.shade.c600,
           },
 
-          closeHover: tokens.ash.c800,
+          closeHover: tokens.shade.c700,
 
           type: {
-            main: tokens.semantic.silver.c300,
-            secondary: tokens.ash.c200,
-            accent: tokens.purple.c200,
+            main: tokens.shade.c100,
+            secondary: tokens.shade.c400,
+            accent: tokens.purple.c400,
           },
         },
       },

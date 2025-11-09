@@ -55,7 +55,7 @@ export function Button(props: Props) {
       "bg-buttons-danger hover:bg-buttons-dangerHover text-white gap-2";
 
   let classes = classNames(
-    "tabbable cursor-pointer inline-flex items-center justify-center rounded-lg font-medium transition-[transform,background-color] duration-100 active:scale-105 md:px-8",
+    "tabbable cursor-pointer inline-flex items-center justify-center rounded-lg font-medium transition-all duration-200 active:scale-95 md:px-8 shadow-sm hover:shadow-md",
     props.padding ?? "px-4 py-3",
     props.className,
     colorClasses,
@@ -136,7 +136,7 @@ export function ButtonPlain(props: ButtonPlainProps) {
       "bg-buttons-cancel hover:bg-buttons-cancelHover transition-colors duration-100 text-white";
 
   const classes = classNames(
-    "cursor-pointer inline-flex items-center justify-center rounded-lg font-medium transition-[transform,background-color] duration-100 active:scale-105 md:px-8",
+    "cursor-pointer inline-flex items-center justify-center rounded-lg font-medium transition-all duration-200 active:scale-95 md:px-8 shadow-sm hover:shadow-md",
     "px-4 py-3",
     props.className,
     colorClasses,
