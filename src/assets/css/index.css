@@ -10,6 +10,9 @@ body {
   min-height: 100vh;
   min-height: 100dvh;
   font-size: 1.0248em;
+  scroll-behavior: smooth;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
 }
 
 html[data-full],
@@ -287,6 +290,8 @@ input[type="range"].styled-slider.slider-progress::-ms-fill-lower {
     rgba(0, 0, 0, 0) 100%
   );
   z-index: 1;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
 }
 
 @media (max-width: 768px) {
@@ -305,6 +310,7 @@ input[type="range"].styled-slider.slider-progress::-ms-fill-lower {
       rgba(0, 0, 0, 1) calc(100% - 20px),
       rgba(0, 0, 0, 0) 100%
     );
+    scroll-snap-type: x proximity;
   }
 }
 

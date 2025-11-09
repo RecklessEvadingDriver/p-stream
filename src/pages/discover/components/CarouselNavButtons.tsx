@@ -20,14 +20,14 @@ function NavButton({ direction, onClick }: NavButtonProps) {
       className={`absolute ${direction === "left" ? "left-12" : "right-12"} top-1/2 transform -translate-y-3/4 z-10`}
       onClick={onClick}
     >
-      <Flare.Base className="group -m-[0.705em] rounded-full bg-search-hoverBackground transition-transform duration-300 focus:relative focus:z-10 hover:bg-mediaCard-hoverBackground tabbable hover:scale-110">
+      <Flare.Base className="group -m-[0.705em] rounded-full bg-search-hoverBackground transition-all duration-300 focus:relative focus:z-10 hover:bg-mediaCard-hoverBackground tabbable hover:scale-110 hover:shadow-lg">
         <Flare.Light
           flareSize={90}
           cssColorVar="--colors-mediaCard-hoverAccent"
           backgroundClass="bg-mediaCard-hoverBackground duration-100"
           className="rounded-full group-hover:opacity-100 z-20"
         />
-        <Flare.Child className="cursor-pointer text-white flex justify-center items-center h-10 w-10 rounded-full active:scale-110 transition-[transform,background-color] duration-200 z-30">
+        <Flare.Child className="cursor-pointer text-white flex justify-center items-center h-10 w-10 rounded-full active:scale-110 transition-all duration-200 z-30">
           <Icon
             icon={
               direction === "left" ? Icons.CHEVRON_LEFT : Icons.CHEVRON_RIGHT

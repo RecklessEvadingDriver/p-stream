@@ -41,10 +41,9 @@ export const SearchBarInput = forwardRef<HTMLInputElement, SearchBarProps>(
       <div ref={containerRef}>
         <Flare.Base
           className={c({
-            "hover:flare-enabled group flex flex-col rounded-[28px] transition-colors sm:flex-row sm:items-center relative backdrop-blur-sm": true,
-            "transition-colors duration-300": true,
+            "hover:flare-enabled group flex flex-col rounded-[28px] transition-all duration-300 sm:flex-row sm:items-center relative backdrop-blur-sm shadow-lg hover:shadow-xl": true,
             "bg-search-background/50": !focused && lightTheme,
-            "bg-search-background":
+            "bg-search-background transform hover:scale-[1.02]":
               focused || props.isSticky || !props.isInFeatured,
           })}
         >
@@ -61,13 +60,12 @@ export const SearchBarInput = forwardRef<HTMLInputElement, SearchBarProps>(
           <Flare.Child className="flex flex-1 flex-col">
             <div
               className={c(
-                "absolute bottom-0 left-5 top-0 flex max-h-14 items-center text-search-icon cursor-pointer z-10",
-                "transition-colors duration-300",
+                "absolute bottom-0 left-5 top-0 flex max-h-14 items-center text-search-icon cursor-pointer z-10 transition-all duration-300",
                 props.isInFeatured
                   ? lightTheme
-                    ? "text-white/50"
-                    : ""
-                  : "text-search-icon",
+                    ? "text-white/50 hover:text-white/80"
+                    : "hover:text-search-icon/80"
+                  : "text-search-icon hover:text-search-icon/80",
               )}
               onClick={(e) => {
                 e.preventDefault();

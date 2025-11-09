@@ -43,19 +43,19 @@ export function Button(props: Props) {
     [loading, href, onClick, navigate],
   );
 
-  let colorClasses = "bg-white hover:bg-gray-200 text-black";
+  let colorClasses = "bg-white hover:bg-gray-200 text-black hover:shadow-lg";
   if (props.theme === "purple")
     colorClasses =
-      "bg-buttons-purple hover:bg-buttons-purpleHover text-white gap-2";
+      "bg-buttons-purple hover:bg-buttons-purpleHover text-white gap-2 hover:shadow-lg hover:shadow-buttons-purple/50";
   if (props.theme === "secondary")
     colorClasses =
-      "bg-buttons-cancel hover:bg-buttons-cancelHover transition-colors duration-100 text-white gap-2";
+      "bg-buttons-cancel hover:bg-buttons-cancelHover transition-all duration-200 text-white gap-2 hover:shadow-lg";
   if (props.theme === "danger")
     colorClasses =
-      "bg-buttons-danger hover:bg-buttons-dangerHover text-white gap-2";
+      "bg-buttons-danger hover:bg-buttons-dangerHover text-white gap-2 hover:shadow-lg hover:shadow-buttons-danger/50";
 
   let classes = classNames(
-    "tabbable cursor-pointer inline-flex items-center justify-center rounded-lg font-medium transition-[transform,background-color] duration-100 active:scale-105 md:px-8",
+    "tabbable cursor-pointer inline-flex items-center justify-center rounded-lg font-medium transition-all duration-200 active:scale-105 md:px-8",
     props.padding ?? "px-4 py-3",
     props.className,
     colorClasses,
